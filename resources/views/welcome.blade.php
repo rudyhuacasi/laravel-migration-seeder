@@ -22,17 +22,18 @@
                 <div class="col-4">
                     <div class="card">
                         <div class="card-body height">
-                            <h3 class="card-title pb-3">{{$treno['azienda']}}</h3>
-                            <p><strong>STAZIONE DI PARTENZA:</strong> {{$treno['stazione_di_partenza']}}</p>
-                            <p><strong>STAZIONE DI ARRIVO:</strong> {{$treno['stazione_di_arrivo']}}</p>
-                            <p><strong>ORARIO DI PARTENZA:</strong> {{$treno['orario_di_partenza']}}</p>
-                            <p><strong>ORARIO DI ARRIVO:</strong> {{$treno['orario_di_arrivo']}}</p>
-                            <p><strong>CODICE TRENO:</strong> {{$treno['codice_treno']}}</p>
-                            <p><strong>NUMERO CARROZZE:</strong> {{$treno['numero_carrozze']}}</p>
+                            <h3 class="card-title pb-3 link-secondary">{{$treno['azienda']}}</h3>
+                            <hr>
+                            <p><strong class="link-danger">STAZIONE DI PARTENZA:</strong> {{$treno['stazione_di_partenza']}}</p>
+                            <p><strong class="link-danger">ORARIO DI PARTENZA:</strong> {{$treno['orario_di_partenza']}}</p>
+                            <p><strong class="link-danger">STAZIONE DI ARRIVO:</strong> {{$treno['stazione_di_arrivo']}}</p>
+                            <p><strong class="link-danger">ORARIO DI ARRIVO:</strong> {{$treno['orario_di_arrivo']}}</p>
+                            <p><strong class="link-danger">CODICE TRENO:</strong> {{$treno['codice_treno']}}</p>
+                            <p><strong class="link-danger">NUMERO CARROZZE:</strong> {{$treno['numero_carrozze']}}</p>
                             @if ($treno['in_orario'] === 1)
-                            <p><strong>in orario</strong></p>
+                            <p><strong class="link-success">IN ORARIO</strong></p>
                             @elseif ($treno['cancellato'] === 1)
-                            <p><strong>cancellato</strong> </p>
+                            <p><strong class="link-danger">CANCELLATO</strong> </p>
                             @endif
 
                         </div>
@@ -42,7 +43,7 @@
             </div>
         </div>
     </main>
-    
+
 </body>
 
 </html>
